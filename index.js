@@ -23,6 +23,10 @@ function sendGetRequest(url) {
     }, 1); // 1000 milliseconds = 1 second
 }
 
+app.get('/', (req, res) => {
+    res.send('Hello Server');
+});
+
 // Define a route to trigger the sendGetRequest function
 app.get('/trigger-request', (req, res) => {
     const url = 'http://www.besdiet.org/';
